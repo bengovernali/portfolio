@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     background-color: #333333;
     color: white;
@@ -75,10 +79,16 @@ h2 {
     margin-top: 60px;
 }
 
+.about-me-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .about-me {
     margin: 0;
     padding: 15px;
     line-height: 25px;
+    align-self: center;
 }
 
 hr {
@@ -102,10 +112,19 @@ h4 {
     margin: 15px;
     border-radius: 8px;
     text-align: center;
+    max-width: 500px;
+    min-width: 400px;
 }
 
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.project-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .container {
@@ -180,6 +199,55 @@ h4 {
         display: block;
         text-align: left;
         padding: 5px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .nav-item {
+        float: right;
+        padding: 0 15px;
+        font-size: 20px;
+    }
+    .about-me {
+        max-width: 500px;
+        font-size: 26px;
+        line-height: 1.5;
+    }
+
+    .card {
+        line-height: 1.5;
+    }
+
+    .card p {
+        font-size: 20px;
+    }
+
+    .card-btn {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    .skills svg {
+        min-width: 150px;
+    }
+
+    .skills {
+        font-size: 20px;
+    }
+
+    .contact {
+        font-size: 18px;
+    }
+
+    .contact-info {
+        font-size: 18px;
     }
 }
 
